@@ -3,6 +3,7 @@ title: "Undergraduate Engineering Enrollment"
 description: |
   This project explores how enrollment in engineering programs have changed from 2003-2013. The factors of race and gender are compared.
 site: distill::distill_website
+bibliography: bibliography.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -74,3 +75,5 @@ clean_data2 %>%
   scale_fill_brewer(palette = "Set2", labels = c("Female", "Male")) +
   theme(legend.position = "bottom")
 ```
+
+[@data]
