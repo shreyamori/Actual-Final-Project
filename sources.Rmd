@@ -1,12 +1,9 @@
 ---
-title: "Untitled"
+title: "Sources"
 description: |
-  A new article created using the Distill format.
+  Detailed notes for the Source
 author:
-  - name: Nora Jones 
-    url: https://example.com/norajones
-    affiliation: Spacely Sprockets
-    affiliation_url: https://example.com/spacelysprokets
+  - name: Shreya Sree Morishetty 
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
