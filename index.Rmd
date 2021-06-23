@@ -22,6 +22,7 @@ library(ggthemes)
 
 ```
 
+Currently, my life is occupied with decisions about my college majors, my college applications, and future careers. As I lean more toward taking up engineering for my undergraduate education, I was curious if the demographics in engineering have changed over time. This project takes data from the National Science Foundation to explore how interest for engineering has changed between different groups.
 
 ```{r raw data, echo = FALSE}
 raw_data <- read_excel(path = "raw_data.xlsx", skip = 1) %>%
@@ -55,12 +56,15 @@ clean_data1 %>%
   labs(title = "Growth of Engineering Enrollment from 2003-2013", 
        subtitle = "The interest for engineering in all races has grown, \n but there was no major change in proportions", 
        x = "Years", y = "Number of undergraduate enrollment", 
-       fill = "Races") +
+       fill = "Races/Ethnicities", 
+       caption = "Source: National Science Foundation") +
   theme_hc() +
   scale_fill_brewer(palette = "Paired", labels = c("Asian", "Black", "Hispanic", "Native American", "White" )) +
   theme(legend.position = "bottom")
   
 ```
+
+This graph compares five different races and ethnicities. The plot reflects that there hasn't been a major shift in the proportionality among the five groups. However, the interest has grown overall from 2003-2013. 
 
 ```{r graph w/ genders, echo=FALSE}
 clean_data2 %>%
@@ -70,10 +74,12 @@ clean_data2 %>%
   labs(title = "Growth of Engineering Enrollment from 2003-2013", 
        subtitle = "The interest for engineering for both genders has grown, \n but there was no major change in proportions", 
        x = "Years", y = "Number of undergraduate enrollment", 
-       fill = "Genders") +
+       fill = "Genders", 
+       caption = "Source: National Science Foundation") +
   theme_hc() +
   scale_fill_brewer(palette = "Set2", labels = c("Female", "Male")) +
   theme(legend.position = "bottom")
 ```
+The interest in engineering has shown a similar trend regardless of the race. If the male student enrollment decreased between two years, the same was reflected for the female student enrollment and vice versa. 
 
-[@data]
+This data [@data] was gathered through numerous federal agencies. The surveys conducted happened at hundreds of institutions across the United States.

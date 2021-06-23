@@ -13,8 +13,8 @@
       "title": "Undergraduate Engineering Enrollment",
       "description": "This project explores how enrollment in engineering programs have changed from 2003-2013. The factors of race and gender are compared.\n",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(Science and Statistics 2013)\r\n\r\n\r\n\r\nScience, National Center for, and Engineering Statistics. 2013. “Undergraduate Enrollment in Engineering Programs.” Alexandria, VA: https://nsf.gov/statistics/2017/nsf17310/data.cfm.\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-06-23T17:20:57-04:00"
+      "contents": "\r\nCurrently, my life is occupied with deciding my college majors, my college applications, and future careers. As I lean more toward taking up engineering for my undergrad education, I was curious if the demographics in engineering have changed. This project takes data from the National Science Foundation to explore how interest for engineering has changed between different groups.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nThis graph compares five different races. The plot reflects that there hasn’t been a major shift in the proportionality among the five groups. However, the interest has grown in general from 2003-2013.\r\n\r\n\r\n\r\nThe interest in engineering has shown a similar trend regardless of the race. If the male student enrollment decreased between two years, the same was reflected for the female student enrollment and vice versa.\r\nThis data ((Science and Statistics 2013)) was gathered through numerous federal agencies. The surveys conducted happened at hundreds of institutions across the United States.\r\n\r\n\r\n\r\nScience, National Center for, and Engineering Statistics. 2013. “Undergraduate Enrollment in Engineering Programs.” Alexandria, VA: https://nsf.gov/statistics/2017/nsf17310/data.cfm.\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-06-23T19:39:50-04:00"
     },
     {
       "path": "sources.html",

@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## About Me
-My name is **Shreya Sree Morishetty**. I go to Dublin Coffman High School, and I will be a senior next year. My interests include playing the flute, reading books, and creative writing. I want to pursue a career in Astronautical or Mechanical Engineering. Also, this is my first experience with Data Science. 
+My name is **Shreya Sree Morishetty**. I go to Dublin Coffman High School, and I will be a senior next year. My interests include playing the flute, reading books, and creative writing. I want to pursue a career in Engineering. Also, this is my first experience with Data Science. 
 
 ## About the Project
 *Growth in undergrad engineering program enrollment from 2003-2013*: This project outlines the changes in the number of undergraduate student enrollments from 2003 to 2013 in engineering programs. The two graphs compares the differences and changes based on race and gender.
