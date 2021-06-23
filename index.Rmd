@@ -8,6 +8,11 @@ site: distill::distill_website
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
+library(readxl)
+library(tidyverse)
+library(janitor)
+library(ggthemes)
+
 # Learn more about creating websites with Distill at:
 # https://rstudio.github.io/distill/website.html
 
@@ -16,3 +21,56 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+
+```{r raw data, echo = FALSE}
+raw_data <- read_excel(path = "raw_data.xlsx", skip = 1) %>%
+  slice(3:13) %>%
+  clean_names() %>%
+  rename(year = "year_and_enrollment_status", 
+         all = "all_undergraduates")
+```
+
+```{r clean data 1, echo = FALSE}
+clean_data1 <- raw_data %>%
+   select("year":"native_american", -"all", -"female", -"male") %>%
+  pivot_longer(names_to = "race", 
+               values_to = "enrollment", 
+               cols = -year)
+```
+
+```{r clean data 2, echo=FALSE}
+clean_data2 <- raw_data %>%
+   select("female", "male", "year") %>%
+  pivot_longer(names_to = "gender", 
+               values_to = "enrollment", 
+               cols = -year) 
+```
+
+```{r graph w/ races, echo=FALSE}
+clean_data1 %>%
+  ggplot(mapping = aes(x = year, y = enrollment, fill = race)) +
+  geom_col(position = "dodge") +
+  scale_y_continuous(labels = scales::comma) +
+  labs(title = "Growth of Engineering Enrollment from 2003-2013", 
+       subtitle = "The interest for engineering in all races has grown, \n but there was no major change in proportions", 
+       x = "Years", y = "Number of undergraduate enrollment", 
+       fill = "Races") +
+  theme_hc() +
+  scale_fill_brewer(palette = "Paired", labels = c("Asian", "Black", "Hispanic", "Native American", "White" )) +
+  theme(legend.position = "bottom")
+  
+```
+
+```{r graph w/ genders, echo=FALSE}
+clean_data2 %>%
+  ggplot(mapping = aes(x = year, y = enrollment, fill = gender)) +
+  geom_col(position = "dodge") +
+  scale_y_continuous(labels = scales::comma) +
+  labs(title = "Growth of Engineering Enrollment from 2003-2013", 
+       subtitle = "The interest for engineering for both genders has grown, \n but there was no major change in proportions", 
+       x = "Years", y = "Number of undergraduate enrollment", 
+       fill = "Genders") +
+  theme_hc() +
+  scale_fill_brewer(palette = "Set2", labels = c("Female", "Male")) +
+  theme(legend.position = "bottom")
+```

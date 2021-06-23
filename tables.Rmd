@@ -1,0 +1,58 @@
+---
+title: "Tables"
+description: |
+  The tables of datasets I used
+author:
+  - name: Shreya Sree Morishetty 
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(rmarkdown)
+```
+
+### The Raw Dataset
+```{r, echo=FALSE, layout = "1-body-outset"}
+x <- read_excel(path = "raw_data.xlsx", skip = 1)
+
+paged_table(x)
+```
+
+### The dataset with just the used columns
+```{r, echo = FALSE, layout = "1-page"}
+raw_data <- read_excel(path = "raw_data.xlsx", skip = 1) %>%
+  slice(3:13) %>%
+  clean_names() %>%
+  rename(year = "year_and_enrollment_status", 
+         all = "all_undergraduates")
+
+
+paged_table(raw_data)
+```
+
+### The rearranged dataset used to make the plot 
+```{r clean data, echo=FALSE}
+  
+clean_data <- raw_data %>%
+   select("year":"native_american") %>%
+  mutate(all = as.double(all)) %>%
+  pivot_longer(names_to = "race and gender", 
+               values_to = "enrollment", 
+               cols = -year)
+
+paged_table(clean_data)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web. 
+
+Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+
+
+
+
+

@@ -8,3 +8,19 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+
+## About Me
+My name is **Shreya Sree Morishetty**. I go to Dublin Coffman High School, and I will be a senior next year. My interests include playing the flute, reading books, and creative writing. I want to pursue a career in Astronautical or Mechanical Engineering. Also, this is my first experience with Data Science. 
+
+## About the Project
+*Growth in undergrad engineering program enrollment from 2003-2013*: This project outlines the changes in the number of undergraduate student enrollments from 2003 to 2013 in engineering programs. The two graphs compares the differences and changes based on race and gender.
+
+### Goals
+* Understand the change in interest for engineering for all students
+* Observe how the differences between races and genders have changed in engineering programs
+  + The numbers for student enrollments are large so a change from 2003-2013 might seem insignificant even though it is a large difference in students.
+  
+"This data science"  
+~Preceptor
+
+[Kane's Free High School Data Science Bootcamp](https://bootcamp.davidkane.info/)
