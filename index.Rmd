@@ -1,7 +1,7 @@
 ---
 title: "Undergraduate Engineering Enrollment"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  This project explores how enrollment in engineering programs have changed from 2003-2013. The factors of race and gender are compared.
 site: distill::distill_website
 ---
 
