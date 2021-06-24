@@ -77,7 +77,7 @@ clean_data2 %>%
        fill = "Genders", 
        caption = "Source: National Science Foundation") +
   theme_hc() +
-  scale_fill_brewer(palette = "Set2", labels = c("Female", "Male")) +
+  scale_fill_brewer(palette = "Paired", labels = c("Female", "Male")) +
   theme(legend.position = "bottom")
 ```
 The interest in engineering has shown a similar trend regardless of the race. If the male student enrollment decreased between two years, the same was reflected for the female student enrollment and vice versa. 
